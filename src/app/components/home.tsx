@@ -38,13 +38,15 @@ const trendingProducts = [
     price: '₹5000/day',
     href: '#',
     imageSrc: '/1.jpeg',
+    imageAlt: 'Black machined steel pen with hexagonal grip and small white logo at top.',
   },
   {
     id: 2,
     name: 'Wheel Loaders',
     price: '₹10000/day',
-    href: '/item',
+    href: '#',
     imageSrc: '/2.jpeg',
+    imageAlt: 'Black machined steel pen with hexagonal grip and small white logo at top.',
   },
   {
     id: 3,
@@ -52,6 +54,7 @@ const trendingProducts = [
     price: '₹2500/day',
     href: '#',
     imageSrc: '/3.jpeg',
+    imageAlt: 'Black machined steel pen with hexagonal grip and small white logo at top.',
   },
   {
     id: 4,
@@ -59,6 +62,7 @@ const trendingProducts = [
     price: '₹4000/day',
     href: '#',
     imageSrc: '/4.jpeg',
+    imageAlt: 'Black machined steel pen with hexagonal grip and small white logo at top.',
   },
 ]
 
@@ -67,18 +71,21 @@ const collections = [
     name: 'Excavators',
     description: '₹5000/day',
     imageSrc: '/5.jpeg',
+    imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
     href: '#',
   },
   {
     name: 'Bulldozer',
     description: '₹12700/day',
     imageSrc: '/7.jpeg',
+    imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
     href: '#',
   },
   {
     name: 'Backhoe Loaders',
     description: '₹3989/day',
     imageSrc: '/8.jpeg',
+    imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
     href: '#',
   },
 ]
@@ -580,6 +587,7 @@ export default function Home() {
                     <li key={product.id} className="inline-flex w-64 flex-col text-center lg:w-auto">
                       <div className="group relative">
                         <img
+                          alt={product.imageAlt}
                           src={product.imageSrc}
                           className="w-full h-48 object-cover rounded-md bg-gray-200 group-hover:opacity-75" // Set height and use object-cover
                         />
@@ -623,6 +631,7 @@ export default function Home() {
                 {collections.map((collection) => (
                   <div key={collection.name} className="group relative">
                     <img
+                      alt={collection.imageAlt}
                       src={collection.imageSrc}
                       className="w-full h-64 rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-[2/1] lg:aspect-square"
                     />
@@ -823,7 +832,7 @@ export default function Home() {
                     src="/1.jpeg"
                     className="size-full object-cover saturate-0 filter"
                   />
-                  <div className="absolute inset-0 bg-yellow-600/80" />
+                  <div className="absolute inset-0 bg-yellow-500/80" />
                 </div>
                 <div className="relative mx-auto max-w-sm text-center">
                   <h3 className="text-2xl font-bold tracking-tight text-white">Get Early Access to Equipment Rentals</h3>
